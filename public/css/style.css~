@@ -1,0 +1,17 @@
+*{}
+body{margin:60px auto 0 auto;font-family:Helvetica,sans-serif;width:900px;background:#E9F0BB;color:#000;}
+a{color:#4DBCE9;text-decoration:none;}
+a:hover{color:#187293;text-decoration:none;}
+
+#container{border:1px solid;background:#FFF;}
+#container h1{font-size:20px;}
+#container nav{background:#D1E751;margin:0;padding:7px;}
+#container nav li{display:inline;margin: 0 10px 0 0;letter-spacing:3px}
+#container nav li a{font-size:23px;}
+
+#container #content{padding:5px;}
+
+.clear{clear:both}
+
+#map{width:700px;height:600px;float:left;}
+#location_list{float:right;margin:10px;}

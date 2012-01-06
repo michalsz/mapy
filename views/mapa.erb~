@@ -1,0 +1,35 @@
+<div id="map"></div>
+<div id="location_list">
+ <% @locations.each do |location| %>
+   <%= location.name %>
+   <%= location.description %>
+   <br/>
+ <% end %>
+</div>
+<div class="clear"></div>
+<script>
+ jQuery(document).ready(function(){
+    var latlng = new google.maps.LatLng(50.9584267, 20.3027343);
+    var kazan_latlng = new google.maps.LatLng(55.80128, 49.08691);
+    var myOptions = {
+      zoom: 4,
+      center: latlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById("map"), myOptions);
+
+     var marker = new google.maps.Marker({
+      position: kazan_latlng,
+      map: map,
+      title:"Hello World!"
+    });
+
+     var paris_latlng = new google.maps.LatLng(48.8647, 2.329102);
+     var paris_marker = new google.maps.Marker({
+      position: paris_latlng,
+      map: map,
+      title:"Hello World!"
+    });
+
+ });
+</script>

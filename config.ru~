@@ -1,0 +1,10 @@
+require 'index'
+
+ENV['RACK_ENV'] = "development"
+
+configure do
+  set :app_name, 'redweb.pl'
+  set :public, File.dirname(__FILE__) + '/public'
+end	  
+
+run Sinatra::Application

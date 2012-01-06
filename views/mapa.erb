@@ -1,0 +1,31 @@
+<div id="map"></div>
+<div id="location_list">
+ <% @locations.each do |location| %>
+   <h1><%= location.name %></h1>
+   <%= location.description %>
+   <br/>
+ <% end %>
+</div>
+<div class="clear"></div>
+<script>
+ jQuery(document).ready(function(){
+    var latlng = new google.maps.LatLng(50.9584267, 20.3027343);
+    var myOptions = {
+      zoom: 4,
+      center: latlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById("map"), myOptions);
+
+   <% @locations.each do |location| %>
+     var location_latlng = new google.maps.LatLng(<%= location.latitude %>, <%= location.longitude %>);
+     var paris_marker = new google.maps.Marker({
+      position: location_latlng,
+      map: map,
+      title:"<%= location.name %>"
+    });
+
+   <% end %>
+
+ });
+</script>
