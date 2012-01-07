@@ -1,4 +1,16 @@
-<h1>Zdjęcia</h1>
+<h1 id="top">Zdjęcia</h1>
+
 <% @locations.each do |location| %>
-  <%= location.name %><br/>
+   <a href="#<%= location.name %>"><%= location.name %></a>
+<% end %>
+
+<% @locations.each do |location| %>
+  <h2 id="<%= location.name %>"><%= location.name %></h2>
+  <h4><%= location.country %></h4>
+  <br/>
+  <% location.images.each do |image| %>
+  <img src="/images/gallery/<%= location.image_dir %>/<%= image %>" alt="<%= location.name %>" width="280"/>
+  <% end %>
+  <br/>
+  <a href="#top">Do góry</a>
 <% end %>
