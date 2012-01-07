@@ -29,4 +29,8 @@ class Location
   def images
     Dir.entries(File.dirname(__FILE__) + "/../public/images/gallery/" + self.image_dir).select {|file_name| file_name =~ /\.jpg/ }
   end
+
+  def has_images
+    !self.images.empty?
+  end
 end

@@ -1,10 +1,15 @@
 <h1 id="top">Zdjęcia</h1>
 
 <% @locations.each do |location| %>
-   <a href="#<%= location.name %>"><%= location.name %></a>
+   <% if location.has_images %>
+      <a href="#<%= location.name %>"><%= location.name %></a>
+   <% end %>
 <% end %>
 
+
+
 <% @locations.each do |location| %>
+<% if location.has_images %>
   <h2 id="<%= location.name %>"><%= location.name %></h2>
   <h4><%= location.country %></h4>
   <br/>
@@ -13,4 +18,5 @@
   <% end %>
   <br/>
   <a href="#top">Do góry</a>
+<% end %>
 <% end %>

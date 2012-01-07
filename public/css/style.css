@@ -1,5 +1,5 @@
 *{}
-body{margin:60px auto 0 auto;font-family:Helvetica,sans-serif;width:900px;background:#E9F0BB;color:#000;}
+body{margin:0 auto 0 auto;font-family:Helvetica,sans-serif;width:900px;background:#E9F0BB;color:#000;}
 a{color:#4DBCE9;text-decoration:none;}
 a:hover{color:#187293;text-decoration:none;}
 
@@ -9,7 +9,7 @@ a:hover{color:#187293;text-decoration:none;}
 #container nav li{display:inline;margin: 0 10px 0 0;letter-spacing:3px}
 #container nav li a{font-size:23px;}
 
-#container #content{padding:5px;}
+#container #content{padding:15px;}
 
 .clear{clear:both}
 
