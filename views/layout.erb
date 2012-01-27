@@ -1,10 +1,11 @@
 <!doctype html>
+<html lang="pl">
 <head>
   <meta charset="utf-8">
   <title><%= @title %></title>
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <script type="text/javascript"
 	  src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
   </script>
@@ -13,18 +14,25 @@
   </script>
 </head>
 <body>
-  <div id="container">
-    <nav>
-      <ul>
-	<li><a href="/">Główna</a></li>
-	<li><a href="/firmy">Firmy</a></li>
-	<li><a href="/zdjecia">Zdjęcia</a></li>
-	<li><a href="/mapa">Mapa</a></li>
-      </ul>
-    </nav>
-    <div id="content">
-      <%= yield %>
+  <div class="topbar">
+    <div class="fill">
+      <div class="container">
+        <a class="brand" href="/">Moje wyjazdy</a>
+        <ul class="nav">
+          <li <%= 'class="active"' if request.path_info == '/' %>><a href="/">Główna</a></li>
+          <li <%= 'class="active"' if request.path_info == '/firmy' %>><a href="/firmy">Firmy</a></li>
+          <li <%= 'class="active"' if request.path_info == '/zdjecia' %>><a href="/zdjecia">Zdjęcia</a></li>
+          <li <%= 'class="active"' if request.path_info == '/mapa' %>><a href="/mapa">Mapa</a></li>
+        </ul>
+      </div>
     </div>
+  </div>
+
+  <div class="container">
+    <%= yield %>
+    <footer>
+      <p>&copy; 2012</p>
+    </footer>
   </div>
 </body>
 </html>

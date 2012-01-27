@@ -22,8 +22,6 @@ class Location
   property :latitude,    Float
   property :longitude,  Float
 
-#  has 1 :company
-
   def image_dir
     name.downcase.gsub(/ż/, 'z').gsub(/\s/, '-')
   end

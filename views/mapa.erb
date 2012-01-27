@@ -1,12 +1,13 @@
-<div id="map"></div>
-<div id="location_list">
- <% @locations.each do |location| %>
-   <h1><%= location.name %></h1>
-   <%= location.description %>
-   <br/>
- <% end %>
+<div id="map" style="height:700px;width:700px;margin-top:40px;float:left;"></div>
+<div id="location_list" style="float:right;width:170px;margin-top:40px;">
+  <% @locations.each do |location| %>
+  <h2><%= location.name %></h2>
+  <a href="/zdjecia#<%= location.name %>">zdjęcia</a>
+  <br/>
+  <% end %>
 </div>
-<div class="clear"></div>
+<div style="clear:both;"></div>
+
 <script>
  jQuery(document).ready(function(){
     var latlng = new google.maps.LatLng(50.9584267, 20.3027343);
