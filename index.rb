@@ -21,7 +21,6 @@ get '/zdjecia' do
   erb :zdjecia
 end
 
-
 get '/mapa' do
   @title = 'Mapa wyjazdów'
   @locations = Location.all()

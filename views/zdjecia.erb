@@ -9,7 +9,7 @@
 <% @locations.each do |location| %>
 <% if location.has_images %>
   <h2 id="<%= location.name %>"><%= location.name %></h2>
-  <h4><%= location.country %></h4>
+  Kraj: <%= location.country %>
   <br/>
   <% location.images.each do |image| %>
   <img src="/images/gallery/<%= location.image_dir %>/<%= image %>" alt="<%= location.name %>" width="280"/>
