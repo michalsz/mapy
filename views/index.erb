@@ -1,5 +1,18 @@
 <div class="hero-unit">
-  <h2>Moje wyjazdy!</h2>
-  <p><a class="btn primary large" href="/mapa">Mapa wyjazdów &raquo;</a></p>
-  <img src="images/home_page.jpg" alt="" />
+  <ul id="slider1">
+    <li><img src="images/home_page.jpg" alt="" /></li>
+    <li><img src="images/home_page1.jpg" alt="" /></li>
+    <li><img src="images/home_page2.jpg" alt="" /></li>
+  </ul>
+  <a class="btn primary large" href="/mapa">Mapa wyjazdów &raquo;</a>
+  <script>
+    $(function(){
+    $('#slider1').bxSlider({
+	mode: 'fade',
+    captions: true,
+    auto: true,
+    controls: false
+  });
+});
+  </script>
 </div>
