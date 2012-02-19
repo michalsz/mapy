@@ -25,7 +25,7 @@ class Location
 #  has 1 :company
 
   def image_dir
-    name.downcase.gsub(/ż/, 'z').gsub(/\s/, '-')
+    name.downcase.gsub(/ż/, 'z').gsub(/\s/, '-').gsub(/ł/, 'l').gsub(/Ś/, 's').gsub(/Ł/, 'l').gsub(/ó/, 'o').gsub(/ź/, 'z')
   end
 
   def images
